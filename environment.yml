@@ -151,7 +151,7 @@ dependencies:
     - entrypoints==0.4
     - executing==0.9.1
     - fastjsonschema==2.16.1
-    - h5py==2.10.0
+    - h5py==3.9.0
     - hickle==4.0.4
     - importlib-metadata==4.12.0
     - ipykernel==6.15.1
@@ -204,4 +204,4 @@ dependencies:
     - webencodings==0.5.1
     - websocket-client==1.3.3
     - zipp==3.8.1
-prefix: /home/yiqi/software/miniconda3/envs/project
+prefix: /home/yiqizhong/miniconda3/envs/mmvp
