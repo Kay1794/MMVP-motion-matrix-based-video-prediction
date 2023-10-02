@@ -32,7 +32,7 @@ strpm_ucf_config['dataroot'] = PATH_TO_DATASET + '/ucf_strpm/'
 
 kth_config = {}
 kth_config['name'] = 'kth'
-kth_config['dataroot'] = '/home/yiqizhong/project/video_prediction/dataset/kth/'
+kth_config['dataroot'] = PATH_TO_DATASET + '/kth/'
 kth_config['in_res'] = (128,128)
 kth_config['prev_len'] = 10
 kth_config['fut_len'] = 20
