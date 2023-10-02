@@ -443,7 +443,6 @@ if __name__ == "__main__":
     parser.add_argument('--pred_method', default='conv3d', help='motion predictor',choices= ['conv3d'])
     parser.add_argument('--base_channel', default=32, type=int, help='input image range')
     parser.add_argument('--pred_base_channel', default=32, type=int, help='input image range')
-    parser.add_argument('--shuffle_setting', action='store_true', help='Pixel shuffle')
     parser.add_argument('--filter_block', action='store_true', help='Conv projection before similarity matrix')
     parser.add_argument('--add_feat_diff', action='store_true', help='add img diff infor to matrix prediction')
     parser.add_argument('--res_img_scale', default=1, type=int, help='The downsample scale of the residual image')
@@ -536,7 +535,6 @@ if __name__ == "__main__":
     cur_config['res_cat_img'] = args.res_cat_img
     cur_config['method'] = args.method
     cur_config['batch'] = args.batch
-    cur_config['shuffle_setting'] = args.shuffle_setting
     cur_config['flip_aug'] = args.flip_aug
     cur_config['rot_aug'] = args.rot_aug
     cur_config['cos_restart'] = args.cos_restart
@@ -580,7 +578,7 @@ if __name__ == "__main__":
     # set mat size
     highres_scale = np.prod(cur_config['downsample_scale'][:-1])
     lowres_scale = np.prod(cur_config['downsample_scale'])
-    if args.shuffle_setting:
+    if config['shuffle_setting']:
         lowres_scale *= 2
         highres_scale *= 2
     
