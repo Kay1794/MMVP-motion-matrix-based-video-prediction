@@ -14,10 +14,13 @@ MMVP has been tested on three datasets: [UCF Sports](https://www.crcv.ucf.edu/da
 
 Please feel free to download our pre-processed dataset:
 
-[UCF Sports MMVP split](https://drive.google.com/drive/folders/12-edQGEKGf6d6mjiiKPF0X0v3ugQwyUM?usp=drive_link)
-[UCF Sports STRPM split](TBD)
-[KTH](https://drive.google.com/drive/folders/1QXWveHrLzpFeqeSPjLuBqw9ZZzOIDnws?usp=drive_link)
-[Moving MNIST](https://drive.google.com/drive/folders/1UhMxaP9sAybpqQBR5u6pLL3EPXVN-wrX?usp=drive_link)
+[UCF Sports MMVP split](https://drive.google.com/drive/folders/12-edQGEKGf6d6mjiiKPF0X0v3ugQwyUM?usp=drive_link); 
+
+[UCF Sports STRPM split](TBD); 
+
+[KTH](https://drive.google.com/drive/folders/1QXWveHrLzpFeqeSPjLuBqw9ZZzOIDnws?usp=drive_link); 
+
+[Moving MNIST](https://drive.google.com/drive/folders/1UhMxaP9sAybpqQBR5u6pLL3EPXVN-wrX?usp=drive_link).
 
 The final data folder `PATH_TO_DATASET` should be organized like this:
 
