@@ -1,6 +1,6 @@
 # MMVP: Motion-Matrix based Video Prediction
 ## [arXiv](https://arxiv.org/abs/2308.16154)
-![Poster](./images/poster.png)
+![Poster](./images/poster.pdf)
 
 
 ```bash
