@@ -53,7 +53,7 @@ PATH_TO_DATASET
 Please modify PATH_TO_DATASET in config.py to your own dataset root. 
 
 ### Run
-
+Please add --use_direct_predictor for kth and moving-mnist dataset
 #### Training
 
 ```bash

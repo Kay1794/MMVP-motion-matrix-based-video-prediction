@@ -578,7 +578,7 @@ if __name__ == "__main__":
     # set mat size
     highres_scale = np.prod(cur_config['downsample_scale'][:-1])
     lowres_scale = np.prod(cur_config['downsample_scale'])
-    if config['shuffle_setting']:
+    if cur_config['shuffle_setting']:
         lowres_scale *= 2
         highres_scale *= 2
     

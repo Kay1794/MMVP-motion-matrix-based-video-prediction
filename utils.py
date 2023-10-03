@@ -44,6 +44,18 @@ def sim_matrix_postprocess(similar_matrix,config=None):
 
     return similar_matrix.reshape(B,T,hw1,hw2)
 
+def sim_matrix_interpolate(in_matrix,ori_hw,target_hw):
+
+    ori_h,ori_w = ori_hw[0],ori_hw[1]
+    target_h,target_w = target_hw[0],target_hw[1]
+    B,T,hw,hw = in_matrix.shape
+    ori_matrix = in_matrix.clone().reshape(B,T,ori_h,ori_w,ori_h,ori_w)
+    ori_matrix_half = F.interpolate(ori_matrix.reshape(-1,ori_h,ori_w).unsqueeze(1),(target_h,target_w),mode='bilinear').squeeze(1) # (BThw,target_h,target_w)
+    new_matrix = F.interpolate(ori_matrix_half.reshape(B,T,ori_h,ori_w,target_h,target_w).permute(0,1,4,5,2,3).reshape(-1,ori_h,ori_w).unsqueeze(1),(target_h,target_w),mode='bicubic').squeeze(1) #(BT*targethw,target_h,target_w)
+    new_matrix = new_matrix.reshape(B,T,target_h,target_w,target_h,target_w).permute(0,1,4,5,2,3).reshape(B,T,target_h*target_w,target_h*target_w)
+
+    return new_matrix
+
 def cut_off_process(similarity_matrix,thre,sigmoid=False,k=-1):
 
     B = similarity_matrix.shape[0]

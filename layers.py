@@ -396,10 +396,8 @@ class SimpleMatrixPredictor3DConv_direct(nn.Module):
         self.conv_pre_1 = nn.Conv2d(hidden_len,hidden_len, kernel_size=3, stride=1, padding=1)
         self.conv_pre_2 = nn.Conv2d(hidden_len, hidden_len, kernel_size=3, stride=1, padding=1)
         self.fut_len = 1 if config['long_term'] else config['fut_len']
-        if self.config['faster_3dconv']:
-            self.conv3d_1 = SplitFastConv3D(config,self.unet_base, self.unet_base, kernel_size=(3, 3, 3), stride=1, padding=(1, 1, 1))
-        else:
-            self.conv3d_1 = Conv3D(config,self.unet_base, self.unet_base, kernel_size=(3, 3, 3), stride=1, padding=(1, 1, 1))
+
+        self.conv3d_1 = Conv3D(config,self.unet_base, self.unet_base, kernel_size=(3, 3, 3), stride=1, padding=(1, 1, 1))
         
         if self.fut_len > 1 :
             self.temporal_layer = Conv3D(config,self.unet_base*2, self.unet_base*2, kernel_size=(3, 3, 3), stride=1, padding=(1, 1, 1))
