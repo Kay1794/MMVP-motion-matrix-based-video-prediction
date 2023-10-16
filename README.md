@@ -16,7 +16,7 @@ Please feel free to download our pre-processed dataset:
 
 [UCF Sports MMVP split](https://drive.google.com/drive/folders/12-edQGEKGf6d6mjiiKPF0X0v3ugQwyUM?usp=drive_link); 
 
-[UCF Sports STRPM split](TBD); 
+[UCF Sports STRPM split (preprocessed data link TBD, please first refer to STIP repo)](https://github.com/ZhengChang467/STIPHR); 
 
 [KTH](https://drive.google.com/drive/folders/1QXWveHrLzpFeqeSPjLuBqw9ZZzOIDnws?usp=drive_link); 
 
